@@ -15,7 +15,7 @@ public class Main {
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 		BufferedReader br = new BufferedReader(new FileReader("E:\\金峰\\学习\\大三\\Hadoop\\Hadoop部署实践\\Film.json"));
-		FileWriter fw = new FileWriter(new File("E:\\金峰\\学习\\大三\\Hadoop\\Hadoop部署实践\\Film1.csv"));
+		FileWriter fw = new FileWriter(new File("E:\\金峰\\学习\\大三\\Hadoop\\Hadoop部署实践\\Film2.csv"));
 		
 		MovieInfo m = null;
 		String line = null;
@@ -30,7 +30,7 @@ public class Main {
 						continue;
 					}
 					fw.append(mId + "," + m.getTitle() + "," + ac + ","+m.getStar() + "\n");
-					
+					fw.flush();
 				}
 			}
 		}

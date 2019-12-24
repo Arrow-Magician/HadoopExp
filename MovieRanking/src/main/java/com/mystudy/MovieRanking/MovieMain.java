@@ -29,7 +29,7 @@ public class MovieMain {
 		job.setOutputKeyClass(MovieInfo.class);
 		job.setOutputValueClass(NullWritable.class);
 		
-//		job.addFileToClassPath(new Path("/lib/fastjson-1.2.62.jar"));
+		job.addFileToClassPath(new Path("/lib/fastjson-1.2.62.jar"));
 		
 		FileInputFormat.setInputPaths(job, new Path(args[0]));
 		FileOutputFormat.setOutputPath(job, new Path(args[1]));

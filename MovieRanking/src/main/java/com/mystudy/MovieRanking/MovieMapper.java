@@ -18,12 +18,12 @@ public class MovieMapper extends Mapper<LongWritable, Text, MovieInfo, NullWrita
 		//转换json
 		MovieInfo mov = JSON.parseObject(data, MovieInfo.class);
 		
-		int count = 0;
-		if(count < 5) {
-			if(mov.getActor().contains(MyActor)) {
-				context.write(mov, NullWritable.get());
-			}
-			count++;
-		}		
+//		int count = 0;
+//		if(count < 5) {
+//			if(mov.getActor().contains(MyActor)) {
+//				context.write(mov, NullWritable.get());
+//			}
+//			count++;
+//		}		
 	}
 }
